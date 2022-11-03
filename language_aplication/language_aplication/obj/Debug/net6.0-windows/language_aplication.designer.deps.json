@@ -13,20 +13,7 @@
             "fileVersion": "3.6.0.0"
           }
         }
-      },
-      "ExcelDataReader.Mapping/2.2.2": {
-        "dependencies": {
-          "ExcelDataReader": "3.6.0",
-          "Microsoft.CSharp": "4.7.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/ExcelMapper.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Microsoft.CSharp/4.7.0": {}
+      }
     }
   },
   "libraries": {
@@ -36,20 +23,6 @@
       "sha512": "sha512-eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
       "path": "exceldatareader/3.6.0",
       "hashPath": "exceldatareader.3.6.0.nupkg.sha512"
-    },
-    "ExcelDataReader.Mapping/2.2.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LwzvpVIYDl/8TZM2BkeCu+AL1H2jBTBR725kWnHVoagssYxsPslXYtM88ChaLzcf5bCIMZMcWVduiy2OVadaGw==",
-      "path": "exceldatareader.mapping/2.2.2",
-      "hashPath": "exceldatareader.mapping.2.2.2.nupkg.sha512"
-    },
-    "Microsoft.CSharp/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "path": "microsoft.csharp/4.7.0",
-      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
     }
   }
 }

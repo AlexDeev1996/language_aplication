@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\language_aplication",
+    "\\language_aplication\\language_aplication"
   ],
-  "SelectedNode": "\\C:\\Users\\Alex\\Source\\Repos\\language_aplication",
+  "SelectedNode": "\\language_aplication\\language_aplication\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
