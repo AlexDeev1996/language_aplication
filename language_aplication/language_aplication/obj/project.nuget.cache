@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PCeqCdYwIDASoOPMwy8mwy4FsMF1SKp8pWp1srII3ISWEB1rZUrO8ucsQ+gIkyg4VMmYQJwQpurs8N8AnpEXhQ==",
+  "dgSpecHash": "qbHwPJnbXr6uYOlfmegHUlKIJCi4k9DlYABHpDwBC+rY5upJcFlqR3osUzSxWZsoKY47DomrMLHCtN5BWL6rKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\language_aplication.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\exceldatareader.mapping\\2.2.2\\exceldatareader.mapping.2.2.2.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
