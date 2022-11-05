@@ -11,22 +11,29 @@ namespace language_aplication
         Excel.Sheets worksheets = null;
         Excel.Worksheet worksheet = null;
         
-        Excel.Range cell = null;
-
+        Excel.Range cell1 = null;
+        Excel.Range cell2 = null;
+        Excel.Range cell3 = null;
+        int count = 1;
+        int count_button = 0;
         string path_word = @"C:\Users\Alex\source\repos\language_aplication\appDE.xlsx";
+        string check_word = "";
+        string deWord = "";
+        string ruWord = "";
+        string translateWord = "";
+
+        Random rand = new Random();
+        bool ru_de = false;
+        bool de_ru = true; 
         public Form1()
         {
             InitializeComponent();
-         
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
             //создаем объект Application
             application = new Excel.Application();
             //получаем ссылку на коллекцию рабочих книг
             workbooks = application.Workbooks;
-            workbook = application.Workbooks.Open(path_word, 
+            workbook = application.Workbooks.Open(path_word,
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
@@ -36,17 +43,60 @@ namespace language_aplication
             //workbook = workbooks.Add(Type.Missing);
             worksheets = workbook.Worksheets; //получаем доступ к коллекции рабочих листов
             worksheet = (Excel.Worksheet)worksheets.get_Item(1);//получаем доступ к первому листу
-            Random rand = new Random();
+            button1.Text = "НАЧАТЬ";
+            correctWordLabel.Text = "";
 
-            for (int i = 0; i < 10; i++)
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (ru_de_RadioButton.Checked)
             {
-                button3.Text = "Проверить";
-                cell = worksheet.Cells[rand.Next(2,499), 2];
-                wordLabel.Text = Convert.ToString(cell.Value2);
-                wordTextBox.Text = "";
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
+                ru_de = true;
+                de_ru = false;
             }
-            
 
+            if (de_ru_RadioButton.Checked)
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("deu-DEU"));
+                de_ru = true;
+                ru_de = false;
+            }
+
+            int random = rand.Next(2, 499);
+            button1.Text = "Далее";
+            if (de_ru)
+            {
+                cell1 = worksheet.Cells[random, 2]; //de
+                cell2 = worksheet.Cells[random, 5]; //ru
+                cell3 = worksheet.Cells[random, 1]; //artikl
+
+                deWord = Convert.ToString(cell1.Value2);
+                translateWord = Convert.ToString(cell2.Value2);
+                translateLabel.Text = translateWord;
+                check_word = Convert.ToString(cell3.Value2);
+                wordLabel.Text = check_word + " " + deWord;
+            }
+
+           if(ru_de)
+           { 
+                cell1 = worksheet.Cells[random, 2]; //de
+                cell2 = worksheet.Cells[random, 5]; //ru
+                cell3 = worksheet.Cells[random, 1]; //artikl
+
+                ruWord = Convert.ToString(cell2.Value2);
+                translateWord = Convert.ToString(cell1.Value2);
+                translateLabel.Text = translateWord;
+                check_word = Convert.ToString(cell3.Value2);
+                wordLabel.Text = ruWord;
+            }
+
+            
+            //wordLabel.Text = word;
+            wordTextBox.Text = "";
+            correctWordLabel.Text = "";
 
         }
 
@@ -55,7 +105,8 @@ namespace language_aplication
             //application.Quit();
             
             //освобождаем память, занятую объектами
-            Marshal.ReleaseComObject(cell);
+            Marshal.ReleaseComObject(cell1);
+            Marshal.ReleaseComObject(cell2);
             Marshal.ReleaseComObject(worksheet);
             Marshal.ReleaseComObject(worksheets);
             Marshal.ReleaseComObject(workbook);
@@ -65,19 +116,21 @@ namespace language_aplication
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
             correctWordLabel.Visible = true;
-            if (wordLabel.Text == wordTextBox.Text)
-            {
-                correctWordLabel.ForeColor = Color.Green;
-                correctWordLabel.Text = "TRUE";
-            }
-            else
-            {
-                correctWordLabel.ForeColor = Color.Red;
-                correctWordLabel.Text = "FALSE";
-            }
-            button3.Text = "Далее";
+          
+
+                if (translateLabel.Text == wordTextBox.Text)
+                {
+                    correctWordLabel.ForeColor = Color.Green;
+                    correctWordLabel.Text = "TRUE";
+                }
+                else
+                {
+                    correctWordLabel.ForeColor = Color.Red;
+                    correctWordLabel.Text = "FALSE";
+                }
+
+
         }
     }
 }
