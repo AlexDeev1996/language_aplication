@@ -49,6 +49,7 @@ namespace language_aplication
             worksheet = (Excel.Worksheet)worksheets.get_Item(1);//получаем доступ к первому листу
             button1.Text = "НАЧАТЬ";
             correctWordLabel.Text = "";
+         
 
 
         }
