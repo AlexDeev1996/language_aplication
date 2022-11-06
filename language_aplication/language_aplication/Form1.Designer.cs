@@ -38,6 +38,8 @@
             this.correctWordLabel = new System.Windows.Forms.Label();
             this.translateLabel = new System.Windows.Forms.Label();
             this.trueWordLabel = new System.Windows.Forms.Label();
+            this.transriptionsLabel = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -136,11 +138,32 @@
             // 
             this.trueWordLabel.AutoSize = true;
             this.trueWordLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.trueWordLabel.Location = new System.Drawing.Point(180, 133);
+            this.trueWordLabel.Location = new System.Drawing.Point(133, 133);
             this.trueWordLabel.Name = "trueWordLabel";
             this.trueWordLabel.Size = new System.Drawing.Size(207, 31);
             this.trueWordLabel.TabIndex = 9;
             this.trueWordLabel.Text = "правильное слово";
+            // 
+            // transriptionsLabel
+            // 
+            this.transriptionsLabel.AutoSize = true;
+            this.transriptionsLabel.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.transriptionsLabel.Location = new System.Drawing.Point(358, 39);
+            this.transriptionsLabel.Name = "transriptionsLabel";
+            this.transriptionsLabel.Size = new System.Drawing.Size(183, 35);
+            this.transriptionsLabel.TabIndex = 10;
+            this.transriptionsLabel.Text = "Транскрипция";
+            this.transriptionsLabel.Visible = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(40, 393);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 29);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "ПРЕДЛОЖЕНИЯ";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -148,6 +171,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.transriptionsLabel);
             this.Controls.Add(this.trueWordLabel);
             this.Controls.Add(this.translateLabel);
             this.Controls.Add(this.correctWordLabel);
@@ -177,5 +202,7 @@
         private Label correctWordLabel;
         private Label translateLabel;
         private Label trueWordLabel;
+        private Label transriptionsLabel;
+        private Button button4;
     }
 }

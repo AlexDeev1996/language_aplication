@@ -14,6 +14,7 @@ namespace language_aplication
         Excel.Range cell1 = null;
         Excel.Range cell2 = null;
         Excel.Range cell3 = null;
+        Excel.Range cell4 = null;
         int count = 1;
         int count_button = 0;
         string path_word = @"C:\Users\Alex\source\repos\language_aplication\appDE.xlsx";
@@ -21,14 +22,17 @@ namespace language_aplication
         string deWord = "";
         string ruWord = "";
         string translateWord = "";
+        string transkriotionsWord = "";
 
         Random rand = new Random();
         bool ru_de = false;
-        bool de_ru = true; 
+        bool de_ru = true;
+
+        private Form2 form2;
         public Form1()
         {
             InitializeComponent();
-
+            form2 = new Form2(this) { Visible = false};
             //создаем объект Application
             application = new Excel.Application();
             //получаем ссылку на коллекцию рабочих книг
@@ -57,19 +61,24 @@ namespace language_aplication
             button1.Text = "Далее";
             if (de_ru)
             {
+                transriptionsLabel.Visible = true;
                 cell1 = worksheet.Cells[random, 2]; //de
                 cell2 = worksheet.Cells[random, 5]; //ru
                 cell3 = worksheet.Cells[random, 1]; //artikl
+                cell4 = worksheet.Cells[random, 4]; //транскрипция
 
+                transkriotionsWord = Convert.ToString(cell4.Value2);
                 deWord = Convert.ToString(cell1.Value2);
                 translateWord = Convert.ToString(cell2.Value2);
                 translateLabel.Text = translateWord;
                 check_word = Convert.ToString(cell3.Value2);
                 wordLabel.Text = check_word + " " + deWord;
+                transriptionsLabel.Text = transkriotionsWord;
             }
 
            if(ru_de)
-           { 
+           {
+                transriptionsLabel.Visible = false;
                 cell1 = worksheet.Cells[random, 2]; //de
                 cell2 = worksheet.Cells[random, 5]; //ru
                 cell3 = worksheet.Cells[random, 1]; //artikl
@@ -138,6 +147,13 @@ namespace language_aplication
                 de_ru = true;
                 ru_de = false;
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            form2.Visible = true;
+
         }
     }
 }

@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace language_aplication
 {
+    
     public partial class Form2 : Form
     {
-        public Form2()
+        private Form1 _form1;
+        public Form2(Form1 form1)
         {
+            _form1 = form1;
             InitializeComponent();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            _form1.Visible = true;
+
         }
     }
 }
