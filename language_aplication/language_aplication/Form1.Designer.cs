@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.correctWordLabel = new System.Windows.Forms.Label();
             this.translateLabel = new System.Windows.Forms.Label();
+            this.trueWordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -86,6 +87,7 @@
             this.ru_de_RadioButton.TabIndex = 4;
             this.ru_de_RadioButton.Text = "RUS/DE";
             this.ru_de_RadioButton.UseVisualStyleBackColor = true;
+            this.ru_de_RadioButton.CheckedChanged += new System.EventHandler(this.ru_de_RadioButton_CheckedChanged);
             // 
             // de_ru_RadioButton
             // 
@@ -123,12 +125,22 @@
             // translateLabel
             // 
             this.translateLabel.AutoSize = true;
-            this.translateLabel.Location = new System.Drawing.Point(258, 46);
+            this.translateLabel.Location = new System.Drawing.Point(565, 9);
             this.translateLabel.Name = "translateLabel";
             this.translateLabel.Size = new System.Drawing.Size(68, 20);
             this.translateLabel.TabIndex = 8;
             this.translateLabel.Text = "перевод";
             this.translateLabel.Visible = false;
+            // 
+            // trueWordLabel
+            // 
+            this.trueWordLabel.AutoSize = true;
+            this.trueWordLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.trueWordLabel.Location = new System.Drawing.Point(180, 133);
+            this.trueWordLabel.Name = "trueWordLabel";
+            this.trueWordLabel.Size = new System.Drawing.Size(207, 31);
+            this.trueWordLabel.TabIndex = 9;
+            this.trueWordLabel.Text = "правильное слово";
             // 
             // Form1
             // 
@@ -136,6 +148,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.trueWordLabel);
             this.Controls.Add(this.translateLabel);
             this.Controls.Add(this.correctWordLabel);
             this.Controls.Add(this.button3);
@@ -163,5 +176,6 @@
         private Button button3;
         private Label correctWordLabel;
         private Label translateLabel;
+        private Label trueWordLabel;
     }
 }

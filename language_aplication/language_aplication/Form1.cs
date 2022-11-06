@@ -51,19 +51,7 @@ namespace language_aplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ru_de_RadioButton.Checked)
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
-                ru_de = true;
-                de_ru = false;
-            }
-
-            if (de_ru_RadioButton.Checked)
-            {
-                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("deu-DEU"));
-                de_ru = true;
-                ru_de = false;
-            }
+           
 
             int random = rand.Next(2, 499);
             button1.Text = "Далее";
@@ -97,6 +85,7 @@ namespace language_aplication
             //wordLabel.Text = word;
             wordTextBox.Text = "";
             correctWordLabel.Text = "";
+            trueWordLabel.Text = "";
 
         }
 
@@ -128,9 +117,27 @@ namespace language_aplication
                 {
                     correctWordLabel.ForeColor = Color.Red;
                     correctWordLabel.Text = "FALSE";
+                    trueWordLabel.Text = translateLabel.Text;
                 }
 
 
+        }
+
+        private void ru_de_RadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ru_de_RadioButton.Checked)
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("deu-DEU"));
+                ru_de = true;
+                de_ru = false;
+            }
+
+            if (de_ru_RadioButton.Checked)
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("ru-RU"));
+                de_ru = true;
+                ru_de = false;
+            }
         }
     }
 }
