@@ -156,5 +156,24 @@ namespace language_aplication
             form2.Visible = true;
 
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            application.Quit();
+            application.Workbooks.Close();
+            
+           
+
+            //освобождаем память, занятую объектами
+            Marshal.ReleaseComObject(cell1);
+            Marshal.ReleaseComObject(cell2);
+            Marshal.ReleaseComObject(cell3);
+            Marshal.ReleaseComObject(cell4);
+            Marshal.ReleaseComObject(worksheet);
+            Marshal.ReleaseComObject(worksheets);
+            Marshal.ReleaseComObject(workbook);
+            Marshal.ReleaseComObject(workbooks);
+            Marshal.ReleaseComObject(application);
+        }
     }
 }
