@@ -29,6 +29,21 @@ namespace language_aplication
         bool de_ru = true;
 
         private Form2 form2;
+
+        private static void CloseExcel(Excel.Application ExcelApplication = null)
+        {
+            if (ExcelApplication != null)
+            {
+                ExcelApplication.Workbooks.Close();
+                ExcelApplication.Quit();
+            }
+
+            System.Diagnostics.Process[] PROC = System.Diagnostics.Process.GetProcessesByName("EXCEL");
+            foreach (System.Diagnostics.Process PK in PROC)
+            {
+                if (PK.MainWindowTitle.Length == 0) { PK.Kill(); }
+            }
+        }
         public Form1()
         {
             InitializeComponent();
@@ -99,19 +114,7 @@ namespace language_aplication
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //application.Quit();
-            
-            //освобождаем память, занятую объектами
-            Marshal.ReleaseComObject(cell1);
-            Marshal.ReleaseComObject(cell2);
-            Marshal.ReleaseComObject(worksheet);
-            Marshal.ReleaseComObject(worksheets);
-            Marshal.ReleaseComObject(workbook);
-            Marshal.ReleaseComObject(workbooks);
-            Marshal.ReleaseComObject(application);
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -159,21 +162,8 @@ namespace language_aplication
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            application.Quit();
-            application.Workbooks.Close();
-            
-           
+            CloseExcel(application);
 
-            //освобождаем память, занятую объектами
-            Marshal.ReleaseComObject(cell1);
-            Marshal.ReleaseComObject(cell2);
-            Marshal.ReleaseComObject(cell3);
-            Marshal.ReleaseComObject(cell4);
-            Marshal.ReleaseComObject(worksheet);
-            Marshal.ReleaseComObject(worksheets);
-            Marshal.ReleaseComObject(workbook);
-            Marshal.ReleaseComObject(workbooks);
-            Marshal.ReleaseComObject(application);
         }
     }
 }
