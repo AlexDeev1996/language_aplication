@@ -68,6 +68,7 @@
             this.wordLabel.Size = new System.Drawing.Size(83, 35);
             this.wordLabel.TabIndex = 3;
             this.wordLabel.Text = "label1";
+            this.wordLabel.Visible = false;
             // 
             // ru_de_RadioButton
             // 
@@ -132,6 +133,7 @@
             this.trueWordLabel.Size = new System.Drawing.Size(207, 31);
             this.trueWordLabel.TabIndex = 9;
             this.trueWordLabel.Text = "правильное слово";
+            this.trueWordLabel.Visible = false;
             // 
             // transriptionsLabel
             // 
@@ -159,6 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.transriptionsLabel);

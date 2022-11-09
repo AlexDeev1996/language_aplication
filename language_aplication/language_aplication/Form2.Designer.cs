@@ -60,6 +60,7 @@
             this.sentenceLabel.Size = new System.Drawing.Size(116, 31);
             this.sentenceLabel.TabIndex = 1;
             this.sentenceLabel.Text = "DE WORD";
+            this.sentenceLabel.Visible = false;
             // 
             // sentenceTextBox
             // 
@@ -120,9 +121,11 @@
             this.correctLabel.Size = new System.Drawing.Size(121, 20);
             this.correctLabel.TabIndex = 7;
             this.correctLabel.Text = "Correct Sentence";
+            this.correctLabel.Visible = false;
             // 
             // infoTextBox
             // 
+            this.infoTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.infoTextBox.Location = new System.Drawing.Point(12, 209);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
@@ -144,6 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkLabel);
             this.Controls.Add(this.infoTextBox);

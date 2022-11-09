@@ -88,6 +88,8 @@ namespace language_aplication
             correctLabel.Text = "";
             sentenceTextBox.Text = "";
             infoTextBox.Text = "";
+            sentenceLabel.Visible = true;
+            correctLabel.Visible = true;
 
             int random = rand.Next(2, 285);
             button1.Text = "Далее";

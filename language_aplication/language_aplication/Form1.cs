@@ -27,6 +27,7 @@ namespace language_aplication
         Random rand = new Random();
         bool ru_de = false;
         bool de_ru = true;
+        bool check_button = false;
 
         private Form2 form2;
 
@@ -64,14 +65,39 @@ namespace language_aplication
             worksheet = (Excel.Worksheet)worksheets.get_Item(1);//получаем доступ к первому листу
             button1.Text = "НАЧАТЬ";
             correctWordLabel.Text = "";
-         
 
+            this.KeyPreview = true;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_two);
 
+        }
+
+        private void Form1_KeyUp_two(object? sender, KeyEventArgs e)
+        {
+
+                if (e.KeyCode == Keys.Enter)
+                {
+                    if (check_button)
+                    {
+                         button1.PerformClick();
+                         check_button = false;
+                    }  
+                }
+ 
+        }
+
+        private void Form1_KeyUp(object? sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3.PerformClick();
+                check_button = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            wordLabel.Visible = true;
 
             int random = rand.Next(2, 499);
             button1.Text = "Далее";
@@ -119,7 +145,7 @@ namespace language_aplication
         private void button3_Click(object sender, EventArgs e)
         {
             correctWordLabel.Visible = true;
-          
+            trueWordLabel.Visible = true;
 
                 if (translateLabel.Text == wordTextBox.Text)
                 {
