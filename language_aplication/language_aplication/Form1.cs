@@ -27,7 +27,6 @@ namespace language_aplication
         Random rand = new Random();
         bool ru_de = false;
         bool de_ru = true;
-        bool check_button = false;
 
         private Form2 form2;
 
@@ -59,6 +58,7 @@ namespace language_aplication
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing);
 
+
             //добавляем новую рабочую книгу в коллекцию
             //workbook = workbooks.Add(Type.Missing);
             worksheets = workbook.Worksheets; //получаем доступ к коллекции рабочих листов
@@ -68,7 +68,7 @@ namespace language_aplication
 
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_two);
+            
 
         }
 
@@ -77,21 +77,23 @@ namespace language_aplication
 
                 if (e.KeyCode == Keys.Enter)
                 {
-                    if (check_button)
-                    {
-                         button1.PerformClick();
-                         check_button = false;
-                    }  
+                    button1.PerformClick();
+                    this.KeyUp += this.Form1_KeyUp;
+                    this.KeyUp -= this.Form1_KeyUp_two;
+
                 }
- 
+            
         }
 
         private void Form1_KeyUp(object? sender, KeyEventArgs e)
         {
+            
+
             if (e.KeyCode == Keys.Enter)
             {
                 button3.PerformClick();
-                check_button = true;
+                this.KeyUp -= this.Form1_KeyUp;
+                this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_two);
             }
         }
 

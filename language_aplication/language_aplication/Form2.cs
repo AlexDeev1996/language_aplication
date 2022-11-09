@@ -57,6 +57,31 @@ namespace language_aplication
             worksheets = workbook.Worksheets; //получаем доступ к коллекции рабочих листов
             worksheet = (Excel.Worksheet)worksheets.get_Item(1);//получаем доступ к первому листу
             button1.Text = "НАЧАТЬ";
+
+            this.KeyPreview = true;
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+        }
+
+        private void Form1_KeyUp(object? sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                button3.PerformClick();
+                this.KeyUp -= this.Form1_KeyUp;
+                this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_two);
+            }
+        }
+
+        private void Form1_KeyUp_two(object? sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+                this.KeyUp += this.Form1_KeyUp;
+                this.KeyUp -= this.Form1_KeyUp_two;
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

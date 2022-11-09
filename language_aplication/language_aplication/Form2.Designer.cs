@@ -116,9 +116,10 @@
             // correctLabel
             // 
             this.correctLabel.AutoSize = true;
+            this.correctLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.correctLabel.Location = new System.Drawing.Point(12, 109);
             this.correctLabel.Name = "correctLabel";
-            this.correctLabel.Size = new System.Drawing.Size(121, 20);
+            this.correctLabel.Size = new System.Drawing.Size(187, 31);
             this.correctLabel.TabIndex = 7;
             this.correctLabel.Text = "Correct Sentence";
             this.correctLabel.Visible = false;
