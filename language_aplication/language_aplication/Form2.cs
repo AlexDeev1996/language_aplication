@@ -116,42 +116,268 @@ namespace language_aplication
             sentenceLabel.Visible = true;
             correctLabel.Visible = true;
 
-            int random = rand.Next(2, 285);
             button1.Text = "Далее";
+
+            int random = rand.Next(2, 285);
+            string deSentence;
+            string ruSentence;
+            string infoSentence;
 
             if (de_ru)
             {
-                cell1 = worksheet.Cells[random, 7]; //de
-                cell2 = worksheet.Cells[random, 8]; //ru
-                cell3 = worksheet.Cells[random, 9]; //премечание 
+                switch (temaComboBox.SelectedIndex)
+                {
+                    case 0:  // 2-91 8
+                        {
+                            random = rand.Next(2, 91);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
 
-                string deSentence = Convert.ToString(cell1.Value2);
-                string ruSentence = Convert.ToString(cell2.Value2);
-                string infoSentence = Convert.ToString(cell3.Value2);
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
 
-                sentenceLabel.Text = deSentence;
-                infoTextBox.Text = infoSentence;
-                checkLabel.Text = ruSentence;
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
 
+                        }
+                        break;
+
+                    case 1:  // 92 - 209 9          
+                        {
+                            random = rand.Next(92, 209);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+
+                    case 2: //210-255 10
+                        {
+                            random = rand.Next(210, 255);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+
+                    case 3: //256-317 11
+                        {
+                            random = rand.Next(256, 317);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+
+                    case 4: //318-367 12
+                        {
+                            random = rand.Next(318, 367);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+
+                    case 5: //368-439 13
+                        {
+                            random = rand.Next(368, 439);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+                    case 6: //440-504 14
+                        {
+                            random = rand.Next(440, 504);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            checkLabel.Text = ruSentence;
+
+                        }
+                        break;
+                    case 7:
+                        {
+                            random = rand.Next(2, 285);
+                            cell1 = worksheet.Cells[random, 7]; //de
+                            cell2 = worksheet.Cells[random, 8]; //ru
+                            cell3 = worksheet.Cells[random, 9]; //премечание 
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+                            infoSentence = Convert.ToString(cell3.Value2);
+
+                            sentenceLabel.Text = deSentence;
+                            infoTextBox.Text = infoSentence;
+                            checkLabel.Text = ruSentence;
+                        }
+                        break;
+                    default:
+                        break;
+                }
 
             }
             if (ru_de)
             {
-                cell1 = worksheet.Cells[random, 7]; //de
-                cell2 = worksheet.Cells[random, 8]; //ru
-                cell3 = worksheet.Cells[random, 9]; //премечание 
+                switch (temaComboBox.SelectedIndex)
+                {
+                    case 1:  // 2-91 8
+                        {
+                            random = rand.Next(2, 91);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
 
-                string deSentence = Convert.ToString(cell1.Value2);
-                string ruSentence = Convert.ToString(cell2.Value2);
-                string infoSentence = Convert.ToString(cell3.Value2);
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
 
-                sentenceLabel.Text = ruSentence;
-                infoTextBox.Text = infoSentence;
-                checkLabel.Text = deSentence;
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
 
-                
+                        }
+                        break;
 
+                    case 2:  // 92 - 209 9          
+                        {
+                            random = rand.Next(92, 209);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+
+                    case 3: //210-255 10
+                        {
+                            random = rand.Next(210, 255);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+
+                    case 4: //256-317 11
+                        {
+                            random = rand.Next(256, 317);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+
+                    case 5: //318-367 12
+                        {
+                            random = rand.Next(318, 367);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+
+                    case 6: //368-439 13
+                        {
+                            random = rand.Next(368, 439);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+                    case 7: //440-504 14
+                        {
+                            random = rand.Next(440, 504);
+                            cell1 = worksheet.Cells[random, 11]; //de
+                            cell2 = worksheet.Cells[random, 12]; //ru
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+
+                        }
+                        break;
+                    case 8:
+                        {
+                            random = rand.Next(2, 285);
+                            cell1 = worksheet.Cells[random, 7]; //de
+                            cell2 = worksheet.Cells[random, 8]; //ru
+                            cell3 = worksheet.Cells[random, 9]; //премечание 
+
+                            deSentence = Convert.ToString(cell1.Value2);
+                            ruSentence = Convert.ToString(cell2.Value2);
+                            infoSentence = Convert.ToString(cell3.Value2);
+
+                            sentenceLabel.Text = ruSentence;
+                            checkLabel.Text = deSentence;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)

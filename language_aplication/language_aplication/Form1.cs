@@ -101,7 +101,7 @@ namespace language_aplication
         {
             wordLabel.Visible = true;
 
-            int random = rand.Next(2, 499);
+            int random = rand.Next(2, 1580);
             button1.Text = "Далее";
             if (de_ru)
             {

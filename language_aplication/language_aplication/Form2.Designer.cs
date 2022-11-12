@@ -39,6 +39,7 @@
             this.correctLabel = new System.Windows.Forms.Label();
             this.infoTextBox = new System.Windows.Forms.TextBox();
             this.checkLabel = new System.Windows.Forms.Label();
+            this.temaComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // button1
@@ -144,12 +145,30 @@
             this.checkLabel.Text = "Check";
             this.checkLabel.Visible = false;
             // 
+            // temaComboBox
+            // 
+            this.temaComboBox.FormattingEnabled = true;
+            this.temaComboBox.Items.AddRange(new object[] {
+            "8) Beruf und Arbeit",
+            "9) Ämter und Behörden",
+            "10) Gesundheit und Krankheit",
+            "11) In der Stadt unterwegs",
+            "12) Kundenservice",
+            "13) Neue Kleider",
+            "14) Feste",
+            "Modalverben"});
+            this.temaComboBox.Location = new System.Drawing.Point(628, 143);
+            this.temaComboBox.Name = "temaComboBox";
+            this.temaComboBox.Size = new System.Drawing.Size(151, 28);
+            this.temaComboBox.TabIndex = 10;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.temaComboBox);
             this.Controls.Add(this.checkLabel);
             this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.correctLabel);
@@ -180,5 +199,6 @@
         private Label correctLabel;
         private TextBox infoTextBox;
         private Label checkLabel;
+        private ComboBox temaComboBox;
     }
 }
