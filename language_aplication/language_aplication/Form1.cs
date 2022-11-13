@@ -27,9 +27,38 @@ namespace language_aplication
         Random rand = new Random();
         bool ru_de = false;
         bool de_ru = true;
-
+        bool button_visible = false;    
+        static int count_ListView = 0;
         private Form2 form2;
 
+
+        private void CompareWord(string word1, string word2)
+        {
+            word1 = word1.Trim();
+            word2 = word2.Trim();
+            if (word1 == word2)
+            {
+                correctWordLabel.ForeColor = Color.Green;
+                correctWordLabel.Text = "TRUE";
+                resultListView.ForeColor = Color.Green;
+                resultListView.Items.Add("TRUE");
+                resultListView.ForeColor = Color.Black;
+                resultListView.Items[count_ListView].SubItems.Add(word1);
+                resultListView.Items[count_ListView].SubItems.Add(word2);
+            }
+            else
+            {
+                correctWordLabel.ForeColor = Color.Red;
+                correctWordLabel.Text = "FALSE";
+                resultListView.ForeColor = Color.Red;
+                resultListView.Items.Add("FALSE");
+                trueWordLabel.Text = translateLabel.Text;
+                resultListView.ForeColor = Color.Black;
+                resultListView.Items[count_ListView].SubItems.Add(word1);
+                resultListView.Items[count_ListView].SubItems.Add(word2);
+            }
+            count_ListView++;
+        }
         private static void CloseExcel(Excel.Application ExcelApplication = null)
         {
             if (ExcelApplication != null)
@@ -68,7 +97,6 @@ namespace language_aplication
 
             this.KeyPreview = true;
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            
 
         }
 
@@ -133,8 +161,10 @@ namespace language_aplication
                 check_word = Convert.ToString(cell3.Value2);
                 wordLabel.Text = ruWord;
             }
+            //  resultListView.Items.Add()
+              //  translateLabel.Text
+              //  wordTextBox.Text
 
-            
             //wordLabel.Text = word;
             wordTextBox.Text = "";
             correctWordLabel.Text = "";
@@ -144,27 +174,14 @@ namespace language_aplication
 
        
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) //Button compare
         {
             correctWordLabel.Visible = true;
             trueWordLabel.Visible = true;
-
-                if (translateLabel.Text == wordTextBox.Text)
-                {
-                    correctWordLabel.ForeColor = Color.Green;
-                    correctWordLabel.Text = "TRUE";
-                }
-                else
-                {
-                    correctWordLabel.ForeColor = Color.Red;
-                    correctWordLabel.Text = "FALSE";
-                    trueWordLabel.Text = translateLabel.Text;
-                }
-
-
+            CompareWord(translateLabel.Text, wordTextBox.Text);
         }
 
-        private void ru_de_RadioButton_CheckedChanged(object sender, EventArgs e)
+        private void ru_de_RadioButton_CheckedChanged(object sender, EventArgs e)  
         {
             if (ru_de_RadioButton.Checked)
             {
@@ -191,6 +208,14 @@ namespace language_aplication
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             CloseExcel(application);
+
+        }
+
+        private void totalResultButton_Click(object sender, EventArgs e)
+        {
+            if (!resultListView.Visible) resultListView.Visible = true;
+            else resultListView.Visible = false;
+            
 
         }
     }

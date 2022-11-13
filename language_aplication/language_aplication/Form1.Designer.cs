@@ -39,6 +39,11 @@
             this.trueWordLabel = new System.Windows.Forms.Label();
             this.transriptionsLabel = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.totalResultButton = new System.Windows.Forms.Button();
+            this.resultListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // button1
@@ -148,13 +153,52 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(40, 393);
+            this.button4.Location = new System.Drawing.Point(652, 409);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(142, 29);
             this.button4.TabIndex = 11;
             this.button4.Text = "ПРЕДЛОЖЕНИЯ";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // totalResultButton
+            // 
+            this.totalResultButton.Location = new System.Drawing.Point(669, 170);
+            this.totalResultButton.Name = "totalResultButton";
+            this.totalResultButton.Size = new System.Drawing.Size(119, 46);
+            this.totalResultButton.TabIndex = 12;
+            this.totalResultButton.Text = "РЕЗУЛЬТАТ";
+            this.totalResultButton.UseVisualStyleBackColor = true;
+            this.totalResultButton.Click += new System.EventHandler(this.totalResultButton_Click);
+            // 
+            // resultListView
+            // 
+            this.resultListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.resultListView.Location = new System.Drawing.Point(40, 222);
+            this.resultListView.Name = "resultListView";
+            this.resultListView.Size = new System.Drawing.Size(606, 216);
+            this.resultListView.TabIndex = 13;
+            this.resultListView.UseCompatibleStateImageBehavior = false;
+            this.resultListView.View = System.Windows.Forms.View.Details;
+            this.resultListView.Visible = false;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Result";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Correct Words";
+            this.columnHeader2.Width = 250;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Wrong Words";
+            this.columnHeader3.Width = 250;
             // 
             // Form1
             // 
@@ -163,6 +207,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.resultListView);
+            this.Controls.Add(this.totalResultButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.transriptionsLabel);
             this.Controls.Add(this.trueWordLabel);
@@ -196,5 +242,10 @@
         private Label trueWordLabel;
         private Label transriptionsLabel;
         private Button button4;
+        private Button totalResultButton;
+        private ListView resultListView;
+        private ColumnHeader columnHeader1;
+        private ColumnHeader columnHeader2;
+        private ColumnHeader columnHeader3;
     }
 }
