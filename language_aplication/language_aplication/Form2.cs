@@ -255,7 +255,7 @@ namespace language_aplication
             {
                 switch (temaComboBox.SelectedIndex)
                 {
-                    case 1:  // 2-91 8
+                    case 0:  // 2-91 8
                         {
                             random = rand.Next(2, 91);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -270,7 +270,7 @@ namespace language_aplication
                         }
                         break;
 
-                    case 2:  // 92 - 209 9          
+                    case 1:  // 92 - 209 9          
                         {
                             random = rand.Next(92, 209);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -285,7 +285,7 @@ namespace language_aplication
                         }
                         break;
 
-                    case 3: //210-255 10
+                    case 2: //210-255 10
                         {
                             random = rand.Next(210, 255);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -300,7 +300,7 @@ namespace language_aplication
                         }
                         break;
 
-                    case 4: //256-317 11
+                    case 3: //256-317 11
                         {
                             random = rand.Next(256, 317);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -315,7 +315,7 @@ namespace language_aplication
                         }
                         break;
 
-                    case 5: //318-367 12
+                    case 4: //318-367 12
                         {
                             random = rand.Next(318, 367);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -330,7 +330,7 @@ namespace language_aplication
                         }
                         break;
 
-                    case 6: //368-439 13
+                    case 5: //368-439 13
                         {
                             random = rand.Next(368, 439);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -344,7 +344,7 @@ namespace language_aplication
 
                         }
                         break;
-                    case 7: //440-504 14
+                    case 6: //440-504 14
                         {
                             random = rand.Next(440, 504);
                             cell1 = worksheet.Cells[random, 11]; //de
@@ -358,7 +358,7 @@ namespace language_aplication
 
                         }
                         break;
-                    case 8:
+                    case 7:
                         {
                             random = rand.Next(2, 285);
                             cell1 = worksheet.Cells[random, 7]; //de

@@ -10,7 +10,7 @@ namespace language_aplication
         Excel.Workbook workbook = null;
         Excel.Sheets worksheets = null;
         Excel.Worksheet worksheet = null;
-        
+
         Excel.Range cell1 = null;
         Excel.Range cell2 = null;
         Excel.Range cell3 = null;
@@ -27,10 +27,26 @@ namespace language_aplication
         Random rand = new Random();
         bool ru_de = false;
         bool de_ru = true;
-        bool button_visible = false;    
+        bool button_visible = false;
         static int count_ListView = 0;
+        static int count_progress_true = 0;
+        static int count_progress_false = 0;
         private Form2 form2;
-
+        private static int progress = 0;
+        public static int Progress
+        { 
+            get { return progress; }
+            set 
+            {
+                if (value <= 0)
+                    progress = 0;
+                else 
+                if (value >= 100)
+                    progress = 100;
+                else progress = value;
+                
+            }  
+        }
 
         private void CompareWord(string word1, string word2)
         {
@@ -38,26 +54,33 @@ namespace language_aplication
             word2 = word2.Trim();
             if (word1 == word2)
             {
+                Progress += 10;
+                toolStripProgressBar1.Value = Progress;
                 correctWordLabel.ForeColor = Color.Green;
                 correctWordLabel.Text = "TRUE";
-                resultListView.ForeColor = Color.Green;
+                
                 resultListView.Items.Add("TRUE");
-                resultListView.ForeColor = Color.Black;
+             
                 resultListView.Items[count_ListView].SubItems.Add(word1);
                 resultListView.Items[count_ListView].SubItems.Add(word2);
+                count_progress_true++;
             }
             else
             {
+                Progress -= 10;
+                toolStripProgressBar1.Value = Progress;
                 correctWordLabel.ForeColor = Color.Red;
                 correctWordLabel.Text = "FALSE";
-                resultListView.ForeColor = Color.Red;
+                
                 resultListView.Items.Add("FALSE");
                 trueWordLabel.Text = translateLabel.Text;
-                resultListView.ForeColor = Color.Black;
+        
                 resultListView.Items[count_ListView].SubItems.Add(word1);
                 resultListView.Items[count_ListView].SubItems.Add(word2);
+                count_progress_false++;
             }
             count_ListView++;
+            toolStripStatusLabel1.Text = $"TRUE = {count_progress_true} FALSE = {count_progress_false}";
         }
         private static void CloseExcel(Excel.Application ExcelApplication = null)
         {
@@ -87,7 +110,7 @@ namespace language_aplication
             Type.Missing, Type.Missing, Type.Missing, Type.Missing,
             Type.Missing, Type.Missing);
 
-
+            
             //добавляем новую рабочую книгу в коллекцию
             //workbook = workbooks.Add(Type.Missing);
             worksheets = workbook.Worksheets; //получаем доступ к коллекции рабочих листов
