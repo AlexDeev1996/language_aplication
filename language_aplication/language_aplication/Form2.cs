@@ -392,5 +392,12 @@ namespace language_aplication
                 correctLabel.Text = checkLabel.Text;
             }
         }
+
+        private void sentenceTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                e.Handled = true;
+            else base.OnKeyPress(e);
+        }
     }
 }

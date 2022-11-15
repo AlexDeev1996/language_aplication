@@ -70,6 +70,7 @@
             this.sentenceTextBox.Name = "sentenceTextBox";
             this.sentenceTextBox.Size = new System.Drawing.Size(767, 38);
             this.sentenceTextBox.TabIndex = 2;
+            this.sentenceTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sentenceTextBox_KeyPress);
             // 
             // button2
             // 

@@ -22,3 +22,4 @@ C:\Users\Alex\source\repos\language_aplication\language_aplication\language_apli
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\language_aplication.pdb
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\language_aplication.genruntimeconfig.cache
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\ref\language_aplication.dll
+C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\bin\Debug\net6.0-windows\System.Speech.dll
