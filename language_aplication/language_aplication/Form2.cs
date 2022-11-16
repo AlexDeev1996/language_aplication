@@ -59,30 +59,29 @@ namespace language_aplication
             button1.Text = "НАЧАТЬ";
 
             this.KeyPreview = true;
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyUp);
+         
         }
-
-        private void Form1_KeyUp(object? sender, KeyEventArgs e)
+        private void Form2_KeyUp(object? sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Enter)
             {
                 button3.PerformClick();
-                this.KeyUp -= this.Form1_KeyUp;
-                this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp_two);
+                this.KeyUp -= this.Form2_KeyUp;
+                this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyUp_two);
             }
         }
-
-        private void Form1_KeyUp_two(object? sender, KeyEventArgs e)
+        private void Form2_KeyUp_two(object? sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 button1.PerformClick();
-                this.KeyUp += this.Form1_KeyUp;
-                this.KeyUp -= this.Form1_KeyUp_two;
-
+                this.KeyUp += this.Form2_KeyUp;
+                this.KeyUp -= this.Form2_KeyUp_two;
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -293,6 +292,7 @@ namespace language_aplication
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
+                            
 
                             sentenceLabel.Text = ruSentence;
                             checkLabel.Text = deSentence;
@@ -320,6 +320,7 @@ namespace language_aplication
                             random = rand.Next(318, 367);
                             cell1 = worksheet.Cells[random, 11]; //de
                             cell2 = worksheet.Cells[random, 12]; //ru
+                            cell3 = worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -335,6 +336,7 @@ namespace language_aplication
                             random = rand.Next(368, 439);
                             cell1 = worksheet.Cells[random, 11]; //de
                             cell2 = worksheet.Cells[random, 12]; //ru
+                            cell3 = worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -349,6 +351,7 @@ namespace language_aplication
                             random = rand.Next(440, 504);
                             cell1 = worksheet.Cells[random, 11]; //de
                             cell2 = worksheet.Cells[random, 12]; //ru
+                            cell3 = worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -371,6 +374,7 @@ namespace language_aplication
 
                             sentenceLabel.Text = ruSentence;
                             checkLabel.Text = deSentence;
+                            infoTextBox.Text = infoSentence;
                         }
                         break;
                     default:
@@ -398,6 +402,13 @@ namespace language_aplication
             if (e.KeyChar == (char)Keys.Enter)
                 e.Handled = true;
             else base.OnKeyPress(e);
+        }
+
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (!infoTextBox.Visible) infoTextBox.Visible = true;
+            else infoTextBox.Visible = false;
         }
     }
 }

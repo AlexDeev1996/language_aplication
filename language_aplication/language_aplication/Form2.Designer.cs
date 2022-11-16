@@ -40,11 +40,14 @@
             this.infoTextBox = new System.Windows.Forms.TextBox();
             this.checkLabel = new System.Windows.Forms.Label();
             this.temaComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(241, 143);
+            this.button1.Location = new System.Drawing.Point(241, 166);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(289, 46);
             this.button1.TabIndex = 0;
@@ -54,11 +57,10 @@
             // 
             // sentenceLabel
             // 
-            this.sentenceLabel.AutoSize = true;
             this.sentenceLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sentenceLabel.Location = new System.Drawing.Point(12, 20);
+            this.sentenceLabel.Location = new System.Drawing.Point(12, 9);
             this.sentenceLabel.Name = "sentenceLabel";
-            this.sentenceLabel.Size = new System.Drawing.Size(116, 31);
+            this.sentenceLabel.Size = new System.Drawing.Size(776, 63);
             this.sentenceLabel.TabIndex = 1;
             this.sentenceLabel.Text = "DE WORD";
             this.sentenceLabel.Visible = false;
@@ -66,7 +68,7 @@
             // sentenceTextBox
             // 
             this.sentenceTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.sentenceTextBox.Location = new System.Drawing.Point(12, 54);
+            this.sentenceTextBox.Location = new System.Drawing.Point(12, 72);
             this.sentenceTextBox.Name = "sentenceTextBox";
             this.sentenceTextBox.Size = new System.Drawing.Size(767, 38);
             this.sentenceTextBox.TabIndex = 2;
@@ -74,7 +76,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 409);
+            this.button2.Location = new System.Drawing.Point(12, 410);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 29);
             this.button2.TabIndex = 3;
@@ -85,7 +87,7 @@
             // ru_de_RadioButton2
             // 
             this.ru_de_RadioButton2.AutoSize = true;
-            this.ru_de_RadioButton2.Location = new System.Drawing.Point(706, 270);
+            this.ru_de_RadioButton2.Location = new System.Drawing.Point(8, 14);
             this.ru_de_RadioButton2.Name = "ru_de_RadioButton2";
             this.ru_de_RadioButton2.Size = new System.Drawing.Size(82, 24);
             this.ru_de_RadioButton2.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             this.de_ru_RadioButton2.AutoSize = true;
             this.de_ru_RadioButton2.Checked = true;
-            this.de_ru_RadioButton2.Location = new System.Drawing.Point(706, 300);
+            this.de_ru_RadioButton2.Location = new System.Drawing.Point(8, 44);
             this.de_ru_RadioButton2.Name = "de_ru_RadioButton2";
             this.de_ru_RadioButton2.Size = new System.Drawing.Size(82, 24);
             this.de_ru_RadioButton2.TabIndex = 5;
@@ -107,7 +109,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 143);
+            this.button3.Location = new System.Drawing.Point(12, 166);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(223, 46);
             this.button3.TabIndex = 6;
@@ -117,11 +119,10 @@
             // 
             // correctLabel
             // 
-            this.correctLabel.AutoSize = true;
             this.correctLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.correctLabel.Location = new System.Drawing.Point(12, 109);
+            this.correctLabel.Location = new System.Drawing.Point(12, 112);
             this.correctLabel.Name = "correctLabel";
-            this.correctLabel.Size = new System.Drawing.Size(187, 31);
+            this.correctLabel.Size = new System.Drawing.Size(767, 55);
             this.correctLabel.TabIndex = 7;
             this.correctLabel.Text = "Correct Sentence";
             this.correctLabel.Visible = false;
@@ -129,12 +130,13 @@
             // infoTextBox
             // 
             this.infoTextBox.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.infoTextBox.Location = new System.Drawing.Point(12, 209);
+            this.infoTextBox.Location = new System.Drawing.Point(12, 261);
             this.infoTextBox.Multiline = true;
             this.infoTextBox.Name = "infoTextBox";
-            this.infoTextBox.Size = new System.Drawing.Size(674, 194);
+            this.infoTextBox.Size = new System.Drawing.Size(674, 143);
             this.infoTextBox.TabIndex = 8;
             this.infoTextBox.Text = "Премечание";
+            this.infoTextBox.Visible = false;
             // 
             // checkLabel
             // 
@@ -158,10 +160,31 @@
             "13) Neue Kleider",
             "14) Feste",
             "Modalverben"});
-            this.temaComboBox.Location = new System.Drawing.Point(628, 143);
+            this.temaComboBox.Location = new System.Drawing.Point(583, 166);
             this.temaComboBox.Name = "temaComboBox";
-            this.temaComboBox.Size = new System.Drawing.Size(151, 28);
+            this.temaComboBox.Size = new System.Drawing.Size(205, 28);
             this.temaComboBox.TabIndex = 10;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox1.Controls.Add(this.ru_de_RadioButton2);
+            this.groupBox1.Controls.Add(this.de_ru_RadioButton2);
+            this.groupBox1.Location = new System.Drawing.Point(692, 280);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(96, 76);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(12, 226);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 29);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "INFO";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form2
             // 
@@ -169,13 +192,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.temaComboBox);
             this.Controls.Add(this.checkLabel);
             this.Controls.Add(this.infoTextBox);
             this.Controls.Add(this.correctLabel);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.de_ru_RadioButton2);
-            this.Controls.Add(this.ru_de_RadioButton2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.sentenceTextBox);
             this.Controls.Add(this.sentenceLabel);
@@ -183,6 +206,8 @@
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +226,7 @@
         private TextBox infoTextBox;
         private Label checkLabel;
         private ComboBox temaComboBox;
+        private GroupBox groupBox1;
+        private Button button4;
     }
 }

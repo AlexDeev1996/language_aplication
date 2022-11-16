@@ -121,28 +121,25 @@ namespace language_aplication
             correctWordLabel.Text = "";
 
             this.KeyPreview = true;
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-
-            
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);   
 
         }
 
         private void Form1_KeyUp_two(object? sender, KeyEventArgs e)
         {
 
-                if (e.KeyCode == Keys.Enter)
-                {
-                    button1.PerformClick();
-                    this.KeyUp += this.Form1_KeyUp;
-                    this.KeyUp -= this.Form1_KeyUp_two;
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+                this.KeyUp += this.Form1_KeyUp;
+                this.KeyUp -= this.Form1_KeyUp_two;
 
-                }
-            
+            }
+
         }
-
         private void Form1_KeyUp(object? sender, KeyEventArgs e)
         {
-            
+
 
             if (e.KeyCode == Keys.Enter)
             {
@@ -250,22 +247,21 @@ namespace language_aplication
         {
             if (e.KeyChar == (char)Keys.Enter)
                 e.Handled = true;
-            //else
-            //    base.OnKeyPressed(e);
+            else base.OnKeyPress(e);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           // SpeechSynthesizer synth = new SpeechSynthesizer();
-           //// System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("deu-DEU");
-           // synth.SetOutputToDefaultAudioDevice();
-           //// synth.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Senior, 2 ,culture);
-           // synth.Volume = 100;// от 0 до 100
-           // synth.Rate = 0;//от -10 до 10
-           // synth.SpeakAsync(wordLabel.Text);
-           // //synth.Speak(wordLabel.Text);
+            //SpeechSynthesizer synth = new SpeechSynthesizer();
+            //// System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("deu-DEU");
+            //synth.SetOutputToDefaultAudioDevice();
+            //// synth.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Senior, 2 ,culture);
+            //synth.Volume = 100;// от 0 до 100
+            //synth.Rate = 0;//от -10 до 10
+            //synth.SpeakAsync(wordLabel.Text);
+            ////synth.Speak(wordLabel.Text);
         }
 
-       
+
     }
 }
