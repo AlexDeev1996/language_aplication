@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4oMS1dzJf8Ncfxodx/ReVl8kjLrIBFADfmhnWcgBd2TiulLnEWR7OkV+1weaCexPScD/hcLguJVwoMJmLn84Tw==",
+  "dgSpecHash": "v0pdgrzAURwIa4k0KPrryJzhloERRyEFJQGkIjgqBDS3kF7bg3TzSeFDloiPCTg6wzzmGHK5HpXKBqCDcoQWQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\language_aplication.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alex\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512"
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
   ],
   "logs": []
 }

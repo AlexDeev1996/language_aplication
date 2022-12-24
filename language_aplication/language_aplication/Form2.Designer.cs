@@ -152,13 +152,27 @@
             // 
             this.temaComboBox.FormattingEnabled = true;
             this.temaComboBox.Items.AddRange(new object[] {
-            "8) Beruf und Arbeit",
+            "А 1.1_1) Guten Tag. Mein Name ist... ",
+            "2) Meine Familie",
+            "3) Einkaufen",
+            "4) Meine Wohnung",
+            "5) Mein Tag",
+            "6) Freizeit ",
+            "7) Kinder und Schule",
+            "А 1.2_8) Beruf und Arbeit",
             "9) Ämter und Behörden",
             "10) Gesundheit und Krankheit",
             "11) In der Stadt unterwegs",
             "12) Kundenservice",
             "13) Neue Kleider",
             "14) Feste",
+            "A 2.1_1) Ankommen",
+            "2) Zu Hause",
+            "3) Essen und Trinken",
+            "4) Arbeitswelt",
+            "5) Sport und Fitness",
+            "6) Schule und Ausbildung",
+            "7) Feste und Geschenke",
             "Modalverben"});
             this.temaComboBox.Location = new System.Drawing.Point(583, 166);
             this.temaComboBox.Name = "temaComboBox";

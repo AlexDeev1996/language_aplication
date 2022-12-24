@@ -129,8 +129,8 @@ namespace language_aplication
                     case 0:  // 2-91 8
                         {
                             random = rand.Next(2, 91);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -144,8 +144,8 @@ namespace language_aplication
                     case 1:  // 92 - 209 9          
                         {
                             random = rand.Next(92, 209);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -159,8 +159,8 @@ namespace language_aplication
                     case 2: //210-255 10
                         {
                             random = rand.Next(210, 255);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -174,8 +174,8 @@ namespace language_aplication
                     case 3: //256-317 11
                         {
                             random = rand.Next(256, 317);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -189,8 +189,8 @@ namespace language_aplication
                     case 4: //318-367 12
                         {
                             random = rand.Next(318, 367);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -204,8 +204,8 @@ namespace language_aplication
                     case 5: //368-439 13
                         {
                             random = rand.Next(368, 439);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -218,8 +218,8 @@ namespace language_aplication
                     case 6: //440-504 14
                         {
                             random = rand.Next(440, 504);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -232,9 +232,9 @@ namespace language_aplication
                     case 7:
                         {
                             random = rand.Next(2, 285);
-                            cell1 = worksheet.Cells[random, 7]; //de
-                            cell2 = worksheet.Cells[random, 8]; //ru
-                            cell3 = worksheet.Cells[random, 9]; //премечание 
+                            cell1 = (Excel.Range)worksheet.Cells[random, 7]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 8]; //ru
+                            cell3 = (Excel.Range)worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -257,8 +257,8 @@ namespace language_aplication
                     case 0:  // 2-91 8
                         {
                             random = rand.Next(2, 91);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -272,8 +272,8 @@ namespace language_aplication
                     case 1:  // 92 - 209 9          
                         {
                             random = rand.Next(92, 209);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -287,8 +287,8 @@ namespace language_aplication
                     case 2: //210-255 10
                         {
                             random = rand.Next(210, 255);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -303,8 +303,8 @@ namespace language_aplication
                     case 3: //256-317 11
                         {
                             random = rand.Next(256, 317);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -318,9 +318,9 @@ namespace language_aplication
                     case 4: //318-367 12
                         {
                             random = rand.Next(318, 367);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
-                            cell3 = worksheet.Cells[random, 9]; //премечание 
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
+                            cell3 = (Excel.Range)worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -334,9 +334,9 @@ namespace language_aplication
                     case 5: //368-439 13
                         {
                             random = rand.Next(368, 439);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
-                            cell3 = worksheet.Cells[random, 9]; //премечание 
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
+                            cell3 = (Excel.Range)worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -349,9 +349,9 @@ namespace language_aplication
                     case 6: //440-504 14
                         {
                             random = rand.Next(440, 504);
-                            cell1 = worksheet.Cells[random, 11]; //de
-                            cell2 = worksheet.Cells[random, 12]; //ru
-                            cell3 = worksheet.Cells[random, 9]; //премечание 
+                            cell1 = (Excel.Range)worksheet.Cells[random, 11]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 12]; //ru
+                            cell3 = (Excel.Range)worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);
@@ -364,9 +364,9 @@ namespace language_aplication
                     case 7:
                         {
                             random = rand.Next(2, 285);
-                            cell1 = worksheet.Cells[random, 7]; //de
-                            cell2 = worksheet.Cells[random, 8]; //ru
-                            cell3 = worksheet.Cells[random, 9]; //премечание 
+                            cell1 = (Excel.Range)worksheet.Cells[random, 7]; //de
+                            cell2 = (Excel.Range)worksheet.Cells[random, 8]; //ru
+                            cell3 = (Excel.Range)worksheet.Cells[random, 9]; //премечание 
 
                             deSentence = Convert.ToString(cell1.Value2);
                             ruSentence = Convert.ToString(cell2.Value2);

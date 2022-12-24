@@ -6,23 +6,23 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "ExcelDataReader/3.6.0": {
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
         "runtime": {
-          "lib/netstandard2.0/ExcelDataReader.dll": {
-            "assemblyVersion": "3.6.0.0",
-            "fileVersion": "3.6.0.0"
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.4795.1000"
           }
         }
       }
     }
   },
   "libraries": {
-    "ExcelDataReader/3.6.0": {
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
-      "path": "exceldatareader/3.6.0",
-      "hashPath": "exceldatareader.3.6.0.nupkg.sha512"
+      "sha512": "sha512-cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
+      "hashPath": "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
     }
   }
 }

@@ -1,7 +1,6 @@
 ﻿using Excel = Microsoft.Office.Interop.Excel;
 using System.Runtime.InteropServices;
-using System.Speech;
-using System.Speech.Synthesis;
+
 
 namespace language_aplication
 {
@@ -158,10 +157,10 @@ namespace language_aplication
             if (de_ru)
             {
                 transriptionsLabel.Visible = true;
-                cell1 = worksheet.Cells[random, 2]; //de
-                cell2 = worksheet.Cells[random, 5]; //ru
-                cell3 = worksheet.Cells[random, 1]; //artikl
-                cell4 = worksheet.Cells[random, 4]; //транскрипция
+                cell1 = (Excel.Range)worksheet.Cells[random, 2]; //de
+                cell2 = (Excel.Range)worksheet.Cells[random, 5]; //ru
+                cell3 = (Excel.Range)worksheet.Cells[random, 1]; //artikl
+                cell4 = (Excel.Range)worksheet.Cells[random, 4]; //транскрипция
 
                 transkriotionsWord = Convert.ToString(cell4.Value2);
                 deWord = Convert.ToString(cell1.Value2);
@@ -175,9 +174,9 @@ namespace language_aplication
            if(ru_de)
            {
                 transriptionsLabel.Visible = false;
-                cell1 = worksheet.Cells[random, 2]; //de
-                cell2 = worksheet.Cells[random, 5]; //ru
-                cell3 = worksheet.Cells[random, 1]; //artikl
+                cell1 = (Excel.Range)worksheet.Cells[random, 2]; //de
+                cell2 = (Excel.Range)worksheet.Cells[random, 5]; //ru
+                cell3 = (Excel.Range)worksheet.Cells[random, 1]; //artikl
 
                 ruWord = Convert.ToString(cell2.Value2);
                 translateWord = Convert.ToString(cell1.Value2);

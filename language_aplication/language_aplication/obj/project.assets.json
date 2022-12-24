@@ -2,49 +2,40 @@
   "version": 3,
   "targets": {
     "net6.0-windows7.0": {
-      "ExcelDataReader/3.6.0": {
+      "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/ExcelDataReader.dll": {}
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/ExcelDataReader.dll": {}
+          "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ExcelDataReader/3.6.0": {
-      "sha512": "eXyxTwG7EEWpgQX3juZ2KcndqTqm/ydx9GXS2lUiMJU54U4h5eXdygRtVgINv0t60ezPWEb+lL7uM7Q+wm5BBA==",
+    "Microsoft.Office.Interop.Excel/15.0.4795.1001": {
+      "sha512": "cuvqi/U5MYSM0gvR2l90q0m/urRgmg69EiwP5VWp1RcaJ0YT5G26Va5LaOZ3KJFc22FNihS5CUjeePUp2YpGQA==",
       "type": "package",
-      "path": "exceldatareader/3.6.0",
+      "path": "microsoft.office.interop.excel/15.0.4795.1001",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "exceldatareader.3.6.0.nupkg.sha512",
-        "exceldatareader.nuspec",
-        "lib/net20/ExcelDataReader.dll",
-        "lib/net20/ExcelDataReader.pdb",
-        "lib/net20/ExcelDataReader.xml",
-        "lib/net45/ExcelDataReader.dll",
-        "lib/net45/ExcelDataReader.pdb",
-        "lib/net45/ExcelDataReader.xml",
-        "lib/netstandard1.3/ExcelDataReader.dll",
-        "lib/netstandard1.3/ExcelDataReader.pdb",
-        "lib/netstandard1.3/ExcelDataReader.xml",
-        "lib/netstandard2.0/ExcelDataReader.dll",
-        "lib/netstandard2.0/ExcelDataReader.pdb",
-        "lib/netstandard2.0/ExcelDataReader.xml"
+        "lib/net20/Microsoft.Office.Interop.Excel.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
-      "ExcelDataReader >= 3.6.0"
+      "Microsoft.Office.Interop.Excel >= 15.0.4795.1001"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alex\\.nuget\\packages\\": {}
+    "C:\\Users\\Alex\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -55,15 +46,20 @@
       "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Alex\\source\\repos\\language_aplication\\language_aplication\\language_aplication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows7.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -82,9 +78,9 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
-          "ExcelDataReader": {
+          "Microsoft.Office.Interop.Excel": {
             "target": "Package",
-            "version": "[3.6.0, )"
+            "version": "[15.0.4795.1001, )"
           }
         },
         "imports": [
@@ -93,7 +89,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -105,7 +102,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
