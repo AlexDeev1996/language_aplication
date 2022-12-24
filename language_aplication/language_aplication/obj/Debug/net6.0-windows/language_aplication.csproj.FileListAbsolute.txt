@@ -19,7 +19,3 @@ C:\Users\Alex\source\repos\language_aplication\language_aplication\language_apli
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\language_aplication.genruntimeconfig.cache
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\ref\language_aplication.dll
 C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
-C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\bin\Debug\net6.0-windows\Interop.Microsoft.Office.Core.dll
-C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\bin\Debug\net6.0-windows\Policy.12.0.Microsoft.Office.Interop.Excel.dll
-C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\bin\Debug\net6.0-windows\Policy.12.0.Microsoft.Office.Interop.Excel.config
-C:\Users\Alex\source\repos\language_aplication\language_aplication\language_aplication\obj\Debug\net6.0-windows\language_aplication.csproj.ResolveComReference.cache
